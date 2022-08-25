@@ -28,8 +28,8 @@ const colorSwitcher = {
     stop() {
         clearInterval(timerId);
         this.isActive = false;
-        refs.stopBtn.style.color = 'grey'
-        refs.startBtn.style.color = 'black'
+        refs.stopBtn.style.color = 'grey';
+        refs.startBtn.style.color = 'black';
     }
 }
 
