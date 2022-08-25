@@ -22,13 +22,13 @@ const colorSwitcher = {
         refs.startBtn.style.color = 'grey';
         refs.stopBtn.style.color = 'black';
 
-        timerId = setInterval(() => {
+        this.timerId = setInterval(() => {
             refs.body.style.backgroundColor = `${getRandomHexColor()}`;
         }, 1000);
     },
 
     stop() {
-        clearInterval(timerId);
+        clearInterval(this.timerId);
 
         this.isActive = false;
 
