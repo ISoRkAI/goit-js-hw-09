@@ -18,8 +18,10 @@ const colorSwitcher = {
             return
         }
         this.isActive = true;
-        refs.startBtn.style.color = 'grey'
-        refs.stopBtn.style.color = 'black'
+
+        refs.startBtn.style.color = 'grey';
+        refs.stopBtn.style.color = 'black';
+
         timerId = setInterval(() => {
             refs.body.style.backgroundColor = `${getRandomHexColor()}`;
         }, 1000);
@@ -27,12 +29,13 @@ const colorSwitcher = {
 
     stop() {
         clearInterval(timerId);
+
         this.isActive = false;
+
         refs.stopBtn.style.color = 'grey';
         refs.startBtn.style.color = 'black';
     }
 }
-
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
