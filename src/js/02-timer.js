@@ -29,7 +29,7 @@ flatpickr(refs.input, {
                     return
                 } else {
                     this.isActive = true;
-                    timerId = setInterval(() => {
+                    const timerId = setInterval(() => {
                         const currentTime = Date.now();
                         const time = selectedDates[0] - currentTime;
                         const timeComponents = convertMs(time)
